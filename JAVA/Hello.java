@@ -1,14 +1,21 @@
 public class Hello {
     public static void main(String[] args) {
-        int age = 20;
-        int score = 75;
+        int[] scores = {60, 70, 85, 95, 40};
+        int count = 0;
+        int sum = 0;
 
-        boolean a = age >= 19;
-        boolean b = score == 100;
-        boolean c =score % 2 == 1;
+        for (int score : scores) {
+            if (score < 70) {
+                continue;
+            }
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+            count++;
+            sum += score;
+        }
+
+        int average = sum / count;
+
+        System.out.println(count);
+        System.out.println(average);
     }
 }
