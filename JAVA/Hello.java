@@ -1,21 +1,17 @@
 public class Hello {
+
+    static void update(int number, int[] numbers) {
+        number += 5;
+        numbers[0] += 5;
+    }
+
     public static void main(String[] args) {
-        int[] scores = {60, 70, 85, 95, 40};
-        int count = 0;
-        int sum = 0;
+        int number = 10;
+        int[] numbers = {10, 20};
 
-        for (int score : scores) {
-            if (score < 70) {
-                continue;
-            }
+        update(number, numbers);
 
-            count++;
-            sum += score;
-        }
-
-        int average = sum / count;
-
-        System.out.println(count);
-        System.out.println(average);
+        System.out.println(number);
+        System.out.println(numbers[0]);
     }
 }
